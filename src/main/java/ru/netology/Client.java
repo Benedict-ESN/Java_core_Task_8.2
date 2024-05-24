@@ -10,7 +10,7 @@ public class Client {
     public static void main(String[] args) {
         try (Socket socket = new Socket("netology.homework", 8083)) {
             OutputStream out = socket.getOutputStream();
-            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            var in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
             // Отправка строки приветствия серверу
             String greeting = "Handshake";
